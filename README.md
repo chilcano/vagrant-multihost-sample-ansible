@@ -1,0 +1,1 @@
+# vagrant-multihost-sample-ansible
