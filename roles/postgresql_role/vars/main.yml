@@ -1,0 +1,5 @@
+---
+postgresql_version: 9.3
+db_name: django_app
+db_user: my_db_usr1
+db_password: my_db_pwd1 

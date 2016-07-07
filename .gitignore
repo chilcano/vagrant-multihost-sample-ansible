@@ -1,1 +1,23 @@
-*.agdai
+# Build and Release Folders
+bin/
+bin-debug/
+bin-release/
+
+# Other files and folders
+.settings/
+
+# My Ignores
+\.DS_Store
+\.classpath
+\.project
+\.settings
+\.metadata/
+Servers/
+target/
+.idea
+.vagrant
+*.txt
+*.gz
+*.jar
+*.zip
+*.iso

@@ -1,0 +1,56 @@
+# The main playbook
+---
+- name: 1. Base configuration for "All hosts"
+  hosts: all
+  become: yes
+  become_method: sudo
+  remote_user: vagrant
+  tasks:
+    - name: Simple CMD for "All hosts"
+      command: hostname -f
+  roles:
+    - all_role
+
+- name: 1. Base configuration for "Zookeeper hosts Group"
+  hosts: zookeeper_hosts_grp
+  become: yes
+  become_method: sudo
+  remote_user: vagrant
+  tasks:
+    - name: Simple CMD for "Zookeeper hosts"
+      command: hostname -f
+  roles:
+    - zookeeper_role
+
+- name: 1. Base configuration for "Kafka hosts Group"
+  hosts: kafka_hosts_grp
+  become: yes
+  become_method: sudo
+  remote_user: vagrant
+  tasks:
+    - name: Simple CMD for "Kafka hosts"
+      command: hostname -f
+  roles:
+    - kafka_role
+
+- name: 1. Base configuration for "Hadoop hosts Group"
+  hosts: hadoop_hosts_grp
+  become: yes
+  become_method: sudo
+  remote_user: vagrant
+  tasks:
+    - name: Simple CMD for "Cloudera Hadoop hosts"
+      command: hostname -f
+  roles:
+    - hadoop_role
+
+- name: 1. Base configuration for "PostgreSQL hosts Group"
+  hosts: postgresql_hosts_grp
+  become: yes
+  become_method: sudo
+  remote_user: vagrant
+  tasks:
+    - name: Simple CMD for "PostgreSQL hosts"
+      command: hostname -f
+  roles:
+    - postgresql_role
